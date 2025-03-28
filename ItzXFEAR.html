@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARASLUD</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            text-align: center;
+            animation: backgroundAnimation 10s infinite alternate, textColorAnimation 5s infinite alternate;
+        }
+
+        h1 {
+            font-size: 3em;
+            animation: glow 2s infinite alternate, moveText 5s ease-in-out infinite;
+        }
+
+        p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin-top: 10px;
+            animation: fadeIn 3s ease-in-out 1;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white; }
+            100% { text-shadow: 0 0 10px white, 0 0 15px white, 0 0 20px white; }
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background: black; }
+            50% { background: #222; } /* Slightly lighter black */
+            100% { background: black; }
+        }
+
+        @keyframes textColorAnimation {
+            0% { color: white; }
+            50% { color: #ff6347; } /* Tomato color */
+            100% { color: white; }
+        }
+
+        @keyframes moveText {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>I am a new developer</h1>
+    <p>Welcome to my website! I like to code websites but I can't code that well.</p>
+</body>
+</html>
